@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\PrometheusFileServiceDiscoveryApi.Client\PrometheusFileServiceDiscoveryApi.Client.csproj" />
+    <ProjectReference Include="..\PrometheusFileServiceDiscoveryApi.Client\PrometheusFileServiceDiscoveryApi.Client.csproj" />
   </ItemGroup>
 
 </Project>
