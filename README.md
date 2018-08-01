@@ -1,6 +1,11 @@
 # PrometheusFileServiceDiscoveryApi.Client
 
-This is an .NetStandard Class library that serves as a client for PrometheusFileServiceDiscoveryApi
+This is a .NetStandard Class library that serves as a client for PrometheusFileServiceDiscoveryApi
+
+# Installation 
+`Install-Package PrometheusFileServiceDiscoveryApi.Client -Version 1.0.0`
+
+# Usage
 
 ```csharp
 public interface ITargetsClient
