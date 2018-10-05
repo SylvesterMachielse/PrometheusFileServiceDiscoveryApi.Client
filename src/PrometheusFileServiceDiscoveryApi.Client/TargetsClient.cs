@@ -11,16 +11,16 @@ namespace PrometheusFileServiceDiscoveryApi.Client
             _restClient = new RestClient(baseUrl);
         }
 
-        public IRestResponse<TargetsModel> Get()
+        public IRestResponse<TargetsModel> Get(string group)
         {
-            var result = _restClient.Get<TargetsModel>(new RestRequest("api/v1/targets"));
+            var result = _restClient.Get<TargetsModel>(new RestRequest("api/v1/targets/{group}"));
 
             return result;
         }
 
-        public IRestResponse Put(TargetModel model)
+        public IRestResponse Put(string group, TargetModel model)
         {
-            var restRequest = new RestRequest("api/v1/targets");
+            var restRequest = new RestRequest("api/v1/targets/{group}");
             restRequest.AddJsonBody(model);
 
             var result = _restClient.Put<TargetsModel>(restRequest);
@@ -28,17 +28,17 @@ namespace PrometheusFileServiceDiscoveryApi.Client
             return result;
         }
 
-        public IRestResponse Delete(string targetName)
+        public IRestResponse Delete(string group, string targetName)
         {
-            var restRequest = new RestRequest($"api/v1/targets/{targetName}");
+            var restRequest = new RestRequest($"api/v1/targets/{group}/{targetName}");
             var result = _restClient.Delete(restRequest);
 
             return result;
         }
 
-        public IRestResponse Patch(TargetModel model)
+        public IRestResponse Patch(string group, TargetModel model)
         {
-            var restRequest = new RestRequest($"api/v1/targets/{model.Targets[0]}");
+            var restRequest = new RestRequest($"api/v1/targets/{group}/{model.Targets[0]}");
             restRequest.AddJsonBody(model);
 
             var result = _restClient.Patch(restRequest);
