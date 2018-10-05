@@ -3,7 +3,7 @@
 This is a .NetStandard Class library that serves as a client for PrometheusFileServiceDiscoveryApi
 
 # Installation 
-`Install-Package PrometheusFileServiceDiscoveryApi.Client -Version 2.0.0`
+`Install-Package PrometheusFileServiceDiscoveryApi.Client -Version 2.0.1`
 
 # Usage
 
