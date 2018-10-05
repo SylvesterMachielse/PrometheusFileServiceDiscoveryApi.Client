@@ -13,14 +13,14 @@ namespace PrometheusFileServiceDiscoveryApi.Client
 
         public IRestResponse<TargetsModel> Get(string group)
         {
-            var result = _restClient.Get<TargetsModel>(new RestRequest("api/v1/targets/{group}"));
+            var result = _restClient.Get<TargetsModel>(new RestRequest($"api/v1/targets/{group}"));
 
             return result;
         }
 
         public IRestResponse Put(string group, TargetModel model)
         {
-            var restRequest = new RestRequest("api/v1/targets/{group}");
+            var restRequest = new RestRequest($"api/v1/targets/{group}");
             restRequest.AddJsonBody(model);
 
             var result = _restClient.Put<TargetsModel>(restRequest);
